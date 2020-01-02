@@ -38,7 +38,8 @@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Lato:700|PT+Serif&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Lato:700|PT+Serif&display=swap" rel="stylesheet">  -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:500&display=swap" rel="stylesheet"> 
 
     <style type="text/css">
 
@@ -344,7 +345,7 @@ body p.mono span {
   }
 }
 #wrapper #text h2 {
-  font: normal 37px/calc(45 / 37) 'National 2 Condensed Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: normal 37px/calc(45 / 37) 'Fira Sans','Lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 15px;
   transition: color 0.3s ease-out;
@@ -355,7 +356,7 @@ body p.mono span {
 }
 @media only screen and (min-width: 769px) {
   #wrapper #text h2 {
-    font: normal 60px/calc(70 / 60) 'National 2 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: normal 60px/calc(70 / 60) 'Fira Sans','Lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 35px;
     -moz-hyphens: none;
     -ms-hyphens: none;
@@ -363,6 +364,8 @@ body p.mono span {
     hyphens: none;
   }
 }
+		
+	/* this is for the header space at the top of the page with the black border bottom */
 #wrapper #text h2:first-of-type:before {
   content: "";
   display: block;
@@ -375,6 +378,8 @@ body p.mono span {
   top: 0;
   background: white;
   z-index: 2;
+		
+	
 }
 @media only screen and (min-width: 769px) {
   #wrapper #text h2:first-of-type:before {
@@ -392,9 +397,12 @@ body p.mono span {
 #wrapper #text h2 span.trigger {
   position: relative;
 }
+		
+	//* removing this removed the red dot with the 1 finally *//	
+		
+		/*
 #wrapper #text h2 span.trigger:after {
   content: "1";
-/*   position: absolute; */
   font: normal 17px/calc(20 / 17) 'Pitch Semibold', Courier, monospace;
   width: 30px;
   height: 30px;
@@ -410,9 +418,10 @@ body p.mono span {
   transition: all 0.3s ease-out;
   position: relative;
   display: inline-block;
-/*   float: right; */
   margin: -40px -25px -15px -5px;
 }
+		*/
+		
 @media only screen and (min-width: 769px) {
   #wrapper #text h2 span.trigger:after {
 /*     width: 40px; */
@@ -431,12 +440,12 @@ body p.mono span {
   }
 }
 #wrapper #text h2 span.active {
-  background-image: linear-gradient(rgba(248, 240, 175, 0) 2%, #f8f0af 2%, #f8f0af 100%);
+  background-image: linear-gradient(rgba(248, 240, 175, 0) 2%, #dadada 2%, #dadada 100%);
 }
 
 @media only screen and (min-width: 769px) {
   #wrapper #text h2 span.active {
-    background-image: linear-gradient(rgba(248, 240, 175, 0) 5.5%, #f8f0af 5.5%, #f8f0af 99%, rgba(248, 240, 175, 0) 99%);
+    background-image: linear-gradient(rgba(248, 240, 175, 0) 5.5%, #dadada 5.5%, #dadada 99%, rgba(248, 240, 175, 0) 99%);
   }
 }
 
@@ -461,7 +470,7 @@ body p.mono span {
   background-image: linear-gradient(to bottom, rgba(23, 101, 255, 0) 50%, #1765ff 50%);
 }
 
- /*below we have the content selectors that style the red dots in the main text */		
+ /*below we have the content selectors that style the red dots in the main text 	
 #wrapper #text h2 #trigger02:after {
   content: "2";
 }
@@ -488,6 +497,8 @@ body p.mono span {
 }
 #wrapper #text h2 #trigger10:after {
   content: "10";
+		
+		*/	
 }
 #wrapper #text p {
   color: rgba(0, 0, 0, 0.85);
@@ -796,80 +807,7 @@ body p.mono span {
       </section>
 		
 	<!-- the following section is for the links and texts and svg logos that appear over the images and videos -->
-      <section id="links">
-        <div class="linkwrap link01">
-          <div class="text">
-            <p><a href="https://www.nytimes.com/interactive/2018/us/addiction-heroin-opioids.html"><span><em>A Visual Journey Through Addiction</em> • Coproduced with Leslye Davis, Jennifer Harlan, Zach Lieberman, Meghan Louttit and Shreeya Sinha.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-        <div class="linkwrap link02">
-          <div class="text">
-            <p><a href="https://www.nytimes.com/interactive/2018/08/30/climate/how-much-hotter-is-your-hometown.html"><span><em>How Much Hotter Is Your Hometown Than When You Were Born?</em> • Coproduced with Blacki Migliozzi, Nadja Popovich, Derek Watkins and Josh Williams.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-        <div class="linkwrap link03">
-          <div class="text">
-            <p><a href="https://www.nytimes.com/interactive/2019/03/14/arts/design/hudson-yards-nyc.html"><span><em>Hudson Yards Is Manhattan’s Biggest, Newest, Slickest Gated Community. Is This the Neighborhood New York Deserves?</em> • Coproduced with Alicia DeSantis, Mika Gröndahl, Christy Harmon, Michael Kimmelman, Sia Michel, Yuliya Parshina-Kottas, Karthik Patanjali, Emily Rhyne, Graham Roberts, Matt Ruby, Josephine Sedgwick and Jeremy White.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-        <div class="linkwrap link04">
-          <div class="text">
-            <p><a href="http://thecompleti.st/no4"><span><em>The Hammer Frankensteins</em> • Coproduced with Troy Griggs, Michael Hoeweler and Lucie Shelly.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-        <div class="linkwrap link05">
-          <div class="text">
-            <p><a href="https://www.nytimes.com/interactive/2018/11/21/nyregion/new-york-storefronts-mystery-font.html"><span><em>The Mystery Font That Took Over New York</em> • Coproduced with Bill Ferguson, Jeffrey Furticella, Meghan Louttit, Jeffrey E. Singer and Vincent Tullo.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-        <div class="linkwrap link06">
-          <div class="text">
-            <p><a href="https://fontsinuse.com/uses/19085/directed-by-john-carpenter"><span><em>Directed by John Carpenter</em> • Edited by Nick Sherman.</span></a></p>
-            <small>
-              <i>
-                <svg class="ring" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
-                  <path d="M35,0.8c18.9,0,34.2,15.3,34.2,34.2S53.9,69.2,35,69.2S0.8,53.9,0.8,35S16.1,0.8,35,0.8"/>
-                </svg>
-              </i>
-            </small>
-          </div>
-        </div>
-      </section>
+      
 
 	<!-- this section has the main text and has the triggers and clears embebed in the spans tags amongst the text-->
       <section id="text">
