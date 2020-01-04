@@ -1,0 +1,991 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-605592-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-605592-4');
+    </script>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="This is the personal website of Rumsey Taylor, a designer and writer who specializes in interactive stories." />
+		<meta name="keywords" content="Rumsey, Taylor, Rumsey Taylor, web, design, music, film, photos, photography, bookmarks, graphic, design, typography, sneakers, pizza, bad movies, New York Times" />
+		<meta name="author" content="Rumsey Taylor" />
+		<meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="mmch.com">
+    <meta property="og:description" content="This is the personal website of Rumsey Taylor, a designer and writer who specializes in interactive stories.">
+    <meta property="og:image" content="http://rumz.org/social/facebook.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="http://rumz.org">
+	
+    <meta name="twitter:title" content="rumz.org">
+    <meta name="twitter:description" content="This is the personal website of Rumsey Taylor, a designer and writer who specializes in interactive stories.">
+    <meta name="twitter:image" content="http://rumz.org/social/twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+	
+		<link rel="stylesheet" href="http://rumz.org/2018/css/reset.css">
+<!--     <link rel="stylesheet/less" type="text/css" href="css/styles.less" /> -->
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- <link href="https://fonts.googleapis.com/css?family=Lato:700|PT+Serif&display=swap" rel="stylesheet">  -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:500&display=swap" rel="stylesheet"> 
+
+    <style type="text/css">
+
+body {
+  color: rgba(0, 0, 0, 0.85);
+  padding: 0 30px;
+  font: normal 17px/calc(20 / 17) 'Pitch Semibold', Courier, monospace;
+}
+@media only screen and (min-width: 769px) {
+  body {
+    padding: 0 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+body em {
+  font-style: italic;
+}
+body h1 span,
+body h4 span,
+body p.mono span {
+  background: white;
+  padding: 10px 15px 10px 15px;
+}
+@keyframes fadeinonload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+		/* keyframes define some animation */
+@keyframes countdown {
+  0% {
+    opacity: 0;
+    transform: translate(-5px, -50%);
+    text-align: left;
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-5px, -50%);
+    text-align: left;
+  }
+  22% {
+    opacity: 1;
+    transform: translate(-5px, -50%);
+    text-align: left;
+  }
+  32% {
+    opacity: 0;
+    transform: translate(-5px, -50%);
+    text-align: left;
+  }
+  33% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  43% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  65% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  66% {
+    opacity: 0;
+    transform: translate(calc(-100% + 5px), -50%);
+    text-align: right;
+  }
+  76% {
+    opacity: 1;
+    transform: translate(calc(-100% + 5px), -50%);
+    text-align: right;
+  }
+  90% {
+    opacity: 1;
+    transform: translate(calc(-100% + 5px), -50%);
+    text-align: right;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-100% + 5px), -50%);
+    text-align: right;
+  }
+}
+@keyframes dashhover {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: 215;
+  }
+  99.9% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper {
+    margin: 0 auto 0 auto;
+  }
+}
+#wrapper #bio {
+  position: fixed;
+  right: 30px;
+  top: 25px;
+  bottom: 0;
+  text-align: right;
+  color: #f07060;
+  z-index: 10;
+  pointer-events: none;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #bio {
+    max-width: 1200px;
+    width: calc(100% - 120px);
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
+#wrapper #bio h1 {
+  transform: translate(15px, 0);
+}
+#wrapper #bio h4 {
+  color: #f07060;
+  position: fixed;
+  left: 15px;
+  top: 25px;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #bio h4 {
+    left: -15px;
+    top: 0;
+  }
+}
+#wrapper #links {
+  position: fixed;
+  right: 30px;
+  bottom: 0;
+  text-align: right;
+  z-index: 11;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #links {
+    max-width: 1200px;
+    width: calc(100% - 120px);
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
+#wrapper #links .linkwrap .text {
+  display: block;
+  position: absolute;
+  bottom: 160px;
+  width: calc(100vw - 60px);
+  max-width: 585px;
+  right: 0;
+  text-align: right;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #links .linkwrap .text {
+    width: calc(100vw - 120px);
+  }
+}
+#wrapper #links .linkwrap .text p a {
+  color: #1765ff;
+  text-decoration: none;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+#wrapper #links .linkwrap .text p a span {
+  background: white;
+  padding: 0 5px 0 5px;
+  margin: 0 -5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#wrapper #links .linkwrap .text p a span em {
+  font-style: italic;
+}
+/*
+#wrapper #links .linkwrap .text p a span em:after {
+  content: "";
+  display: table;
+  margin-bottom: 10px;
+}
+*/
+#wrapper #links .linkwrap .text small {
+  display: block;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: -75px;
+  z-index: -1;
+}
+#wrapper #links .linkwrap .text small i {
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+/*
+#wrapper #links .linkwrap .text small i:before {
+  content: "Wait for more info…";
+  color: #1765FF;
+  background: yellow;
+}
+*/
+		
+/* here we have this content selector with the 3 2 1 */		
+		#wrapper #links .linkwrap .text small i:after {
+		  content: " 3 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 2 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 1";
+		  position: absolute;
+		  display: block;
+		  width: 200px;
+		  height: 10px;
+		  line-height: 10px;
+		  text-align: center;
+		  color: #1765FF;
+		  top: 50%;
+		  left: 50%;
+		  opacity: 0;
+		  transform: translate(-5px, -50%);
+		}
+#wrapper #links .linkwrap .text small .ring {
+  opacity: 0;
+  fill: none;
+  stroke: #1765FF;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 215;
+  stroke-dashoffset: 215;
+}
+
+
+/*
+@media only screen and (min-width: 769px) {
+  #wrapper #links .linkwrap .text p a:before {
+    max-width: none;
+  }
+}
+*/
+/* here we have this content selector with the arrow */	
+		#wrapper #links .linkwrap .text p a:after {
+		  content: "→";
+		  display: block;
+		  position: absolute;
+		  right: 0;
+		  bottom: -75px;
+		  width: 70px;
+		  height: 70px;
+		  background: #1765ff;
+		  border-radius: 100%;
+		  color: white;
+		  float: right;
+		  text-align: center;
+		  line-height: 70px;
+		  margin: 0;
+		  transform: scale(0);
+		  transition: transform 0.1s ease-out;
+		}
+#wrapper #links .linkwrap .text p a:hover {
+  text-decoration: underline;
+}
+#wrapper #text {
+  width: calc(4/5 * 100%);
+  margin-bottom: 50vh;
+  padding-top: 100px;
+  opacity: 0;
+  animation: 0.8s ease-out 0.4s 1 fadeinonload;
+  animation-fill-mode: forwards;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #text {
+    width: calc(2/3 * 100%);
+    padding-top: 119px;
+  }
+}
+#wrapper #text h2 {
+  font: normal 37px/calc(45 / 37) 'Fira Sans','Lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+  transition: color 0.3s ease-out;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #text h2 {
+    font: normal 60px/calc(70 / 60) 'Fira Sans','Lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 35px;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+}
+		
+	/* this is for the header space at the top of the page with the black border bottom */
+#wrapper #text h2:first-of-type:before {
+  content: "";
+  display: block;
+  height: 33px;
+  width: calc(100vw - 60px);
+  border-bottom: 1px rgba(0, 0, 0, 0.85) solid;
+  padding-bottom: 36px;
+  max-width: 1200px;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 2;
+		
+	
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #text h2:first-of-type:before {
+    width: calc(100vw - 120px);
+  }
+}
+#wrapper #text h2 span {
+  padding: 0 5px 0 5px;
+  margin: 0 -5px;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#wrapper #text h2 span.trigger {
+  position: relative;
+}
+		
+	//* removing this removed the red dot with the 1 finally *//	
+		
+		/*
+#wrapper #text h2 span.trigger:after {
+  content: "1";
+  font: normal 17px/calc(20 / 17) 'Pitch Semibold', Courier, monospace;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100%;
+  z-index: 1;
+  transform: scale(0.5) translate(-10px, -10px);
+  transform-origin: top left;
+  background: #f07060;
+  color: #f07060;
+  transition: all 0.3s ease-out;
+  position: relative;
+  display: inline-block;
+  margin: -40px -25px -15px -5px;
+}
+		*/
+		
+@media only screen and (min-width: 769px) {
+  #wrapper #text h2 span.trigger:after {
+/*     width: 40px; */
+/*     height: 40px; */
+/*     line-height: 40px; */
+    transform: scale(0.5) translate(-15px, -23px);
+  }
+}
+#wrapper #text h2 span.trigger.active:after {
+  transform: scale(1) translate(-10px, -10px);
+  color: white;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #text h2 span.trigger.active:after {
+    transform: scale(1) translate(-15px, -23px);
+  }
+}
+#wrapper #text h2 span.active {
+  background-image: linear-gradient(rgba(248, 240, 175, 0) 2%, #dadada 2%, #dadada 100%);
+}
+
+@media only screen and (min-width: 769px) {
+  #wrapper #text h2 span.active {
+    background-image: linear-gradient(rgba(248, 240, 175, 0) 5.5%, #dadada 5.5%, #dadada 99%, rgba(248, 240, 175, 0) 99%);
+  }
+}
+
+#wrapper #text h2 span.clear {
+  background: transparent;
+  animation: none;
+}
+#wrapper #text h2 span.clear.active {
+  background: transparent;
+  animation: none;
+}
+#wrapper #text h2 a {
+  color: #1765ff;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(23, 101, 255, 0) 50%, rgba(23, 101, 255, 0.2) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 calc(90%);
+  transition: color 0.3s ease-out;
+}
+#wrapper #text h2 a:hover {
+  background-image: linear-gradient(to bottom, rgba(23, 101, 255, 0) 50%, #1765ff 50%);
+}
+
+ /*below we have the content selectors that style the red dots in the main text 	
+#wrapper #text h2 #trigger02:after {
+  content: "2";
+}
+#wrapper #text h2 #trigger03:after {
+  content: "3";
+}
+#wrapper #text h2 #trigger04:after {
+  content: "4";
+}
+#wrapper #text h2 #trigger05:after {
+  content: "5";
+}
+#wrapper #text h2 #trigger06:after {
+  content: "6";
+}
+#wrapper #text h2 #trigger07:after {
+  content: "7";
+}
+#wrapper #text h2 #trigger08:after {
+  content: "8";
+}
+#wrapper #text h2 #trigger09:after {
+  content: "9";
+}
+#wrapper #text h2 #trigger10:after {
+  content: "10";
+		
+		*/	
+}
+#wrapper #text p {
+  color: rgba(0, 0, 0, 0.85);
+  transition: color 0.3s ease-out;
+}
+#wrapper #text p a {
+  color: #1765ff;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+#wrapper #text p a:hover {
+  text-decoration: underline;
+}
+#wrapper #text p:before {
+  content: "";
+  display: block;
+  width: calc(100vw - 60px);
+  max-width: 1200px;
+  border-top: 1px rgba(0, 0, 0, 0.85) solid;
+  margin: 24px 0 30px 0;
+  transition: border-color 0.3s ease-out;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #text p:before {
+    width: calc(100vw - 120px);
+    margin: 50px 0 60px 0;
+  }
+}
+#wrapper #text p + p {
+  margin-top: 10px;
+}
+#wrapper #text p + p:before {
+  content: none;
+}
+#wrapper #work {
+  max-width: 1200px;
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  left: 30px;
+  transform: translate(0, -50%);
+  z-index: -1;
+  width: calc(100% - 60px);
+  height: 0;
+  margin: 0 auto;
+  opacity: 0;
+  animation: 0.8s ease-out 0.6s 1 fadeinonload;
+  animation-fill-mode: forwards;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #work {
+    top: calc(50% + 50px);
+    width: calc(100% - 120px);
+  }
+}
+#wrapper #work .work-wrapper {
+  position: absolute;
+  width: calc(2/3 * 100%);
+  max-width: 585px;
+  top: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+#wrapper #work .work-wrapper .inner {
+  /*
+        .text {
+          display: none;
+          text-align: right;
+        }
+*/
+}
+#wrapper #work .work-wrapper .inner img,
+#wrapper #work .work-wrapper .inner video,
+#wrapper #work .work-wrapper .inner .textasimage {
+  width: 100%;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #work .work-wrapper .inner img,
+  #wrapper #work .work-wrapper .inner video,
+  #wrapper #work .work-wrapper .inner .textasimage {
+    /*             max-height: calc(~"100vh - 140px"); */
+  }
+}
+#wrapper #work .work-wrapper .inner .textasimage {
+  font-size: 50vw;
+  line-height: 1;
+}
+@media only screen and (min-width: 769px) {
+  #wrapper #work .work-wrapper .inner .textasimage {
+    font-size: 256px;
+  }
+}
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a,
+#wrapper.text p a {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+	/* the next six selectors relate to the svg countdown timer but not the arrown link button */
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span,
+#wrapper.text p a span {
+  opacity: 1;
+  transition-delay: 20s;
+}
+		
+/*this one came commented out, don't know why*/		
+/*
+#wrapper.show01 #links .linkwrap.link01 .text p a:before,
+#wrapper.show02 #links .linkwrap.link02 .text p a:before,
+#wrapper.show03 #links .linkwrap.link03 .text p a:before,
+#wrapper.show04 #links .linkwrap.link04 .text p a:before,
+#wrapper.show05 #links .linkwrap.link05 .text p a:before,
+#wrapper.show06 #links .linkwrap.link06 .text p a:before,
+#wrapper.show07 #links .linkwrap.link07 .text p a:before,
+#wrapper.show08 #links .linkwrap.link08 .text p a:before,
+#wrapper.show09 #links .linkwrap.link09 .text p a:before,
+#wrapper.show10 #links .linkwrap.link10 .text p a:before {
+  animation: 3s countdown forwards linear;
+}
+ */
+
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring,
+#wrapper.text small .ring {
+  animation: dashhover 20s linear forwards;
+}
+	
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after,
+#wrapper.text small i:after {
+  animation: countdown 20s linear forwards;
+}
+
+
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after,
+#wrapper.text p a:after {
+  transition-delay: 20s;
+  transform: scale(1);
+}
+		
+@media only screen and (min-width: 769px) {
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after,
+  #wrapper.text p a:hover:after {
+    transition-delay: 0s;
+    transform: scale(1.6);
+  }
+}
+		//*
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2,
+#wrapper #text h2 {
+  color: rgba(0, 0, 0, 0.2);
+}
+		
+		*//
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a,
+#wrapper #text h2 a {
+  color: rgba(0, 0, 0, 0.2);
+  background: none;
+}
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover,
+#wrapper #text h2 a:hover {
+  background: none;
+  color: rgba(0, 0, 0, 0.2);
+}
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p,
+#wrapper #text p {
+  color: rgba(0, 0, 0, 0.15);
+}
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a,
+#wrapper #text p a {
+  color: rgba(0, 0, 0, 0.15);
+}
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before,
+#wrapper #text p:before {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+#wrapper.show01 #trigger01,
+#wrapper.show02 #trigger02,
+#wrapper.show03 #trigger03,
+#wrapper.show04 #trigger04,
+#wrapper.show05 #trigger05,
+#wrapper.show06 #trigger06,
+#wrapper.show07 #trigger07,
+#wrapper.show08 #trigger08,
+#wrapper.show09 #trigger09,
+#wrapper.show10 #trigger10 {
+  color: rgba(0, 0, 0, 0.8);
+}
+#wrapper.show01 #work .work-wrapper#work01,
+#wrapper.show02 #work .work-wrapper#work02,
+#wrapper.show03 #work .work-wrapper#work03,
+#wrapper.show04 #work .work-wrapper#work04,
+#wrapper.show05 #work .work-wrapper#work05,
+#wrapper.show06 #work .work-wrapper#work06,
+#wrapper.show07 #work .work-wrapper#work07,
+#wrapper.show08 #work .work-wrapper#work08,
+#wrapper.show09 #work .work-wrapper#work09,
+#wrapper.show10 #work .work-wrapper#work10 {
+  opacity: 1;
+}
+
+    </style>
+
+    <title>mmch.com</title>
+	</head>
+	<body>
+
+    <div id="wrapper">
+	<!-- this is the header -->
+      <section id="bio" >
+        <h1><span>github.com</span></h1>
+        <h4><span>•</span></h4>
+      </section>
+		
+	<!-- the following section is for the links and texts and svg logos that appear over the images and videos -->
+      
+
+	<!-- this section has the main text and has the triggers and clears embebed in the spans tags amongst the text-->
+      <section id="text">
+        <h2><span class="clear">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span></h2>
+        <h2><span class="clear">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium.
+						
+		
+
+			Aliquam et malesuada nisi. Duis ut commodo velit. </span><span class="trigger" id="trigger01">this visual&shy;Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>, <span class="trigger" id="trigger02">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>, <span class="trigger" id="trigger03">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.&shy;Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>.<span class="clear"> Presently he is employed at <em>The New York Times</em>.</span></h2>
+        <h2><span class="clear">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit. </span><span class="trigger" id="trigger04">British film adaptations of <em>Frankenstein</em>,</span> <span class="trigger" id="trigger05">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span> <span class="trigger" id="trigger06">and the typo&shy;Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>.</h2>
+        <h2><span class="clear">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit. </span><span class="trigger" id="trigger07">in&shy;Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>, <span class="trigger" id="trigger08">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>, <span class="trigger" id="trigger09">&shy;Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>, <span class="trigger" id="trigger10">Duis porttitor, diam eu semper viverra, dolor ipsum tristique nibh, sit amet efficitur ex nibh non nisl. Nunc libero dui, consequat vitae dui in, luctus mollis tellus. Ut lacinia leo in convallis pretium. Aliquam et malesuada nisi. Duis ut commodo velit.</span>.</h2>
+        <h2><span class="clear">
+        <h2><span class="clear">
+      </section>
+
+<!-- the following section has the images that appear on the left, i'm unsure where this closes, or not -->
+      <section id="work">
+<!--
+        <div class="work-wrapper" id="work01">
+          <div class="inner">
+            <div class="textasimage">👋</div>
+            <div class="text">
+              <p>This section only appears when the first span on page is active.</p>
+            </div>
+          </div>
+        </div>
+-->
+        <div class="work-wrapper" id="work01">
+          <div class="inner">
+            <img src="videos/breezeblocks.JPG">
+          </div>
+        </div>
+        <div class="work-wrapper" id="work02">
+          <div class="inner">
+           <img src="videos/brickbuilding.JPG">
+          </div>
+        </div>
+        <div class="work-wrapper" id="work03">
+          <div class="inner">
+              <source src="videos/graff1.JPG">
+          </div>
+        </div>
+        <div class="work-wrapper" id="work04">
+          <div class="inner">
+            <img src="videos/graff2.JPG" alt="don't forget alt text lol" />
+          </div>
+        </div>
+        <div class="work-wrapper" id="work05">
+          <div class="inner">
+            <img src="videos/graff3.JPG" alt="don't forget alt text lol" />
+          </div>
+        </div>
+        <div class="work-wrapper" id="work06">
+          <div class="inner">
+              <img src="videos/ironwork.JPG">
+          </div>
+        </div>
+        <div class="work-wrapper" id="work07">
+          <div class="inner">
+            <img src="videos/mystery.JPG" alt="Twisted Pair • a Neil Breen film" />
+          </div>
+        </div>
+        <div class="work-wrapper" id="work08">
+          <div class="inner">
+            <img src="videos/skyline.JPG" alt="Photos of people taking photos" />
+          </div>
+        </div>
+        <div class="work-wrapper" id="work09">
+          <div class="inner">
+              <img src="videos/swan.JPG" >
+          </div>
+        </div>
+        <div class="work-wrapper" id="work10">
+          <div class="inner">
+            <img src="videos/walkway.JPG">
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+<!-- the link to the jQuery plugin is also neccesary to see the images	-->	
+    <script src="http://sjwilliams.github.io/scrollstory/js/jquery.scrollstory.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script> -->
+		
+<!-- below we have the javascript that adds and removes the classes to show and hide the images -->		
+    <script>
+      $(function(){
+        $('#text').scrollStory({
+          debug: false,
+          content: 'h2 span',
+          triggerOffset: '35%',
+          itemfocus: function(ev, item){
+            console.log('item active', item.index, item.id, item.data, item);
+            if(item.id === 'trigger01'){
+              $('#wrapper').addClass('show01')
+            } else {
+             $('#wrapper').removeClass('show01')
+            }
+            if(item.id === 'trigger02'){
+              $('#wrapper').addClass('show02')
+            } else {
+             $('#wrapper').removeClass('show02')
+            }
+            if(item.id === 'trigger03'){
+              $('#wrapper').addClass('show03')
+            } else {
+             $('#wrapper').removeClass('show03')
+            }
+            if(item.id === 'trigger04'){
+              $('#wrapper').addClass('show04')
+            } else {
+             $('#wrapper').removeClass('show04')
+            }
+            if(item.id === 'trigger05'){
+              $('#wrapper').addClass('show05')
+            } else {
+             $('#wrapper').removeClass('show05')
+            }
+            if(item.id === 'trigger06'){
+              $('#wrapper').addClass('show06')
+            } else {
+             $('#wrapper').removeClass('show06')
+            }
+            if(item.id === 'trigger07'){
+              $('#wrapper').addClass('show07')
+            } else {
+             $('#wrapper').removeClass('show07')
+            }
+            if(item.id === 'trigger08'){
+              $('#wrapper').addClass('show08')
+            } else {
+             $('#wrapper').removeClass('show08')
+            }
+            if(item.id === 'trigger09'){
+              $('#wrapper').addClass('show09')
+            } else {
+             $('#wrapper').removeClass('show09')
+            }
+            if(item.id === 'trigger10'){
+              $('#wrapper').addClass('show10')
+            } else {
+             $('#wrapper').removeClass('show10')
+            }
+/*
+            if(item.id === 'trigger07'){
+              $('#wrapper').addClass('show07')
+            } else {
+             $('#wrapper').removeClass('show07')
+            }
+*/
+          }
+        });
+      });
+    </script>
+
+<!--
+		<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-605592-4']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+-->
+		
+	</body>	
+</html>
+
